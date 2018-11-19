@@ -86,12 +86,13 @@
                 return;
             }
 
+            DateTime start = DateTime.Now;
             if (_convertToDt)
                 ConvertToDateTime();
             else
                 ImportToGraphite();
 
-            Console.WriteLine("All done!!");
+            Console.WriteLine($"All done!!  (Took {(DateTime.Now - start).TotalMilliseconds} ms)");
             Console.WriteLine("Press ENTER to exit");
             Console.ReadLine();
         }
